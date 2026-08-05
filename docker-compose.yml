@@ -1,0 +1,126 @@
+version: '3.8'
+
+services:
+  # MySQL Database
+  mysql:
+    image: mysql:8.0
+    container_name: hdbo-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
+      MYSQL_DATABASE: bobench
+      MYSQL_USER: bobench_user
+      MYSQL_PASSWORD: ${DB_PASS}
+    # Port mapping removed - MySQL only needed internally by backend
+    # ports:
+    #   - "3308:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - hdbo-network
+
+  # Redis for caching (optional, for future use)
+  redis:
+    image: redis:7-alpine
+    container_name: hdbo-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - hdbo-network
+
+  # Backend API (Spring Boot)
+  backend:
+    build:
+      context: ./bo-backend
+      dockerfile: Dockerfile
+    container_name: hdbo-backend
+    environment:
+      - DB_URL=jdbc:mysql://mysql:3306/bobench?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_DDL_AUTO=update
+      - DB_SHOW_SQL=false
+      - MAIL_HOST=${MAIL_HOST}
+      - MAIL_PORT=${MAIL_PORT}
+      - MAIL_USERNAME=${MAIL_USERNAME}
+      - MAIL_PASSWORD=${MAIL_PASSWORD}
+      - LLM_API_KEY=${LLM_API_KEY}
+      - LLM_BASE_URL=${LLM_BASE_URL}
+      - LLM_MODEL=${LLM_MODEL}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRATION_MS=${JWT_EXPIRATION_MS}
+      - UPLOAD_DIR=/app/uploads
+      - SERVER_PORT=8081
+      - PYTHON_ENGINE_URL=http://engine:8000
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./bo-backend/uploads:/app/uploads
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - hdbo-network
+
+  # Python Optimization Engine
+  engine:
+    build:
+      context: ./bo-engine
+      dockerfile: Dockerfile
+    container_name: hdbo-engine
+    environment:
+      - ENGINE_HOST=0.0.0.0
+      - ENGINE_PORT=8000
+      - CORS_ORIGINS=http://localhost:3000,http://localhost:5173,http://localhost:8081
+      - META_DATASET_PATH=/app/data/meta_dataset.csv
+      - SELECTOR_MODEL_PATH=/app/models/selector_model.pkl
+      - LOG_LEVEL=INFO
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./bo-engine/data:/app/data
+      - ./bo-engine/models:/app/models
+    networks:
+      - hdbo-network
+
+  # Frontend (React + Vite)
+  frontend:
+    build:
+      context: ./bo-platform
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_BASE_URL=http://localhost:8081/api/v1
+        - VITE_PYTHON_ENGINE_URL=http://localhost:8000
+        - VITE_GOOGLE_CLIENT_ID=${VITE_GOOGLE_CLIENT_ID:-YOUR_GOOGLE_CLIENT_ID_HERE}
+        - VITE_ADMIN_EMAIL=${VITE_ADMIN_EMAIL:-admin@hdbobench.local}
+        - VITE_ADMIN_PASSWORD=${VITE_ADMIN_PASSWORD:-changeme}
+    container_name: hdbo-frontend
+    ports:
+      - "3000:5173"
+    volumes:
+      - ./bo-platform:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+      - engine
+    networks:
+      - hdbo-network
+
+volumes:
+  mysql_data:
+  redis_data:
+
+networks:
+  hdbo-network:
+    driver: bridge

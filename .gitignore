@@ -1,0 +1,27 @@
+# Maven build output — never commit
+bo-backend/target/
+bo-engine/__pycache__/
+bo-engine/*.pyc
+bo-engine/.pytest_cache/
+
+# Node
+bo-platform/node_modules/
+bo-platform/dist/
+
+# Virtual env
+bo-engine/venv/
+
+# IDE & OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Env files with secrets
+.env.local
+.env.production
+*.env
+
+# Logs
+*.log

@@ -1,0 +1,76 @@
+spring:
+  application:
+    name: bobench
+
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/bobench?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
+    username: ${DB_USER:root}
+    password: ${DB_PASS:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: ${DB_DDL_AUTO:validate}
+    show-sql: ${DB_SHOW_SQL:false}
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+llm:
+  api:
+    key: ${LLM_API_KEY:ollama}
+    base-url: ${LLM_BASE_URL:http://localhost:11434/v1}
+    model: ${LLM_MODEL:llama3.1}
+
+server:
+  port: ${SERVER_PORT:8081}
+  error:
+    include-message: always
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  health:
+    mail:
+      enabled: false
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:}
+    expirationMs: ${JWT_EXPIRATION_MS:86400000} # 24 hours
+  upload:
+    dir: ${UPLOAD_DIR:uploads}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:4173,http://localhost:3000}
+
+python:
+  engine:
+    url: ${PYTHON_ENGINE_URL:http://localhost:8000}
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method

@@ -1,0 +1,39 @@
+services:
+  # ── Spring Boot Backend ──────────────────────────────────────────────────────
+  - type: web
+    name: bo-backend
+    runtime: docker
+    dockerfilePath: ./bo-backend/Dockerfile
+    dockerContext: ./bo-backend
+    plan: free
+    envVars:
+      - key: DB_URL
+        value: jdbc:mysql://<YOUR_MYSQL_HOST>:3306/bobench?useSSL=true&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      - key: DB_USER
+        value: <YOUR_MYSQL_USER>
+      - key: DB_PASS
+        value: <YOUR_MYSQL_PASS>
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PYTHON_ENGINE_URL
+        fromService:
+          type: web
+          name: bo-engine
+          property: host
+      - key: LLM_API_KEY
+        value: ollama
+      - key: LLM_BASE_URL
+        value: http://localhost:11434/v1
+      - key: LLM_MODEL
+        value: llama3.1
+      - key: UPLOAD_DIR
+        value: /app/uploads
+
+  # ── FastAPI Python Engine ────────────────────────────────────────────────────
+  - type: web
+    name: bo-engine
+    runtime: docker
+    dockerfilePath: ./bo-engine/Dockerfile
+    dockerContext: ./bo-engine
+    plan: free
+    envVars: []

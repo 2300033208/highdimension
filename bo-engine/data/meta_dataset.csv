@@ -1,0 +1,159 @@
+problem_id,problem_name,n_dimensions,n_continuous,n_integer,n_categorical,continuous_ratio,search_space_volume,evaluation_budget,budget_per_dim,is_noisy,dimensionality_class,algorithm_id,best_value,wall_clock_time,n_evaluations,rank,is_best
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,turbo,0.0006984314716847,0.1208753585815429,15,1,True
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,saasbo,0.000790499973151,0.1427421569824218,15,2,False
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,vanilla-bo,0.0028817702076015,0.5340995788574219,15,3,False
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,hebo,0.006593053787652,0.3382625579833984,15,4,False
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,optuna,0.9789618522374198,0.0144684314727783,15,5,False
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,random-search,2.008716053084406,0.0004398822784423,15,6,False
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,baxus,4.1656433794226775,0.12199068069458,15,7,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,optuna,15.414464974276042,0.010019302368164,15,1,True
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,hebo,17.38343608155293,0.324657678604126,15,2,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,random-search,17.938101766197136,0.0002071857452392,15,3,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,saasbo,18.77734490060076,0.5191507339477539,15,4,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,turbo,19.03669173282627,0.3412954807281494,15,5,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,baxus,19.852558512870527,0.1369550228118896,15,6,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,vanilla-bo,20.118086925002817,0.1507256031036377,15,7,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,baxus,37.68929080520785,0.1756880283355713,15,1,True
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,optuna,7188.028253903491,0.0123043060302734,15,2,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,saasbo,23900.694359635272,0.4878745079040527,15,3,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,hebo,30469.25678942883,0.4446234703063965,15,4,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,turbo,36388.166470318494,0.4289970397949219,15,5,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,vanilla-bo,56941.05038500778,0.3010880947113037,15,6,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,random-search,60516.02772579144,0.0003430843353271,15,7,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,baxus,6.879939071058374,0.1552152633666992,15,1,True
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,turbo,109.27022437851622,0.3661808967590332,15,2,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,vanilla-bo,112.65752248312612,0.5122106075286865,15,3,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,saasbo,125.8132190337113,0.533113956451416,15,4,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,optuna,126.33719995904104,0.0793123245239257,15,5,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,hebo,128.2322821212531,0.368617296218872,15,6,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,random-search,133.07607205103855,0.00032639503479,15,7,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,baxus,19.136961879458863,0.0910615921020507,15,1,True
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,turbo,20.472716041906395,0.075397253036499,15,2,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,random-search,20.701187722119247,0.0003504753112792,15,3,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,optuna,20.771864941258915,0.030902624130249,15,4,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,saasbo,20.78748574411005,0.5774416923522949,15,5,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,vanilla-bo,20.78892201733689,0.1854987144470214,15,6,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,hebo,20.853861292007128,0.0425562858581543,15,7,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,baxus,49.44249595709629,0.1843268871307373,15,1,True
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,turbo,173.2255887737271,0.042231798171997,15,2,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,vanilla-bo,206.453306137608,0.1088533401489257,15,3,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,random-search,207.40425340724656,0.000486135482788,15,4,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,hebo,219.2834447933904,0.0562291145324707,15,5,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,optuna,221.94131435527493,0.0385711193084716,15,6,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,saasbo,223.17388685096475,0.9242503643035888,15,7,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,baxus,17.64412815269575,0.0949265956878662,15,1,True
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,saasbo,20.35442237787237,1.212673902511597,15,2,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,turbo,20.49541251537394,0.0735502243041992,15,3,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,optuna,20.685777481917576,0.0569643974304199,15,4,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,vanilla-bo,20.897400437139268,0.2585155963897705,15,5,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,hebo,20.93285156329316,0.0797133445739746,15,6,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,random-search,20.94846399029971,0.0002987384796142,15,7,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,baxus,79810.79469819972,0.1328113079071045,15,1,True
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,optuna,4867622.782109253,0.1110448837280273,15,2,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,vanilla-bo,5793980.392564275,0.127497911453247,15,3,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,random-search,6741022.500940368,0.0006897449493408,15,4,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,hebo,6902574.559088348,0.0666589736938476,15,5,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,saasbo,6962777.880809933,2.8829495906829834,15,6,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,turbo,7756816.565233308,0.8163378238677979,15,7,False
+dataset-airfoil_aerodynamic_noise_5D,Ackley Function,25,25,0,0,1.0,104.565,150,6.0,False,high,turbo,18.09610967492483,5.973472595214844,150,1,True
+dataset-airfoil_aerodynamic_noise_5D,Ackley Function,25,25,0,0,1.0,104.565,150,6.0,False,high,saasbo,19.83515512763825,39.20327615737915,150,2,False
+dataset-airfoil_aerodynamic_noise_5D,Ackley Function,25,25,0,0,1.0,104.565,150,6.0,False,high,hebo,20.504743553493068,5.971452951431274,150,3,False
+ackley-test,Ackley Function,5,5,0,0,1.0,20.913,15,3.0,False,low,baxus,3.7367737944259214,0.4299941062927246,15,1,True
+ackley-test,Ackley Function,5,5,0,0,1.0,20.913,15,3.0,False,low,optuna,19.43245562299619,0.0675785541534423,15,2,False
+ackley-test,Ackley Function,5,5,0,0,1.0,20.913,15,3.0,False,low,random-search,20.37705548116373,0.0018727779388427,15,3,False
+ackley-test,Ackley Function,5,5,0,0,1.0,20.913,15,3.0,False,low,turbo,20.431434720994822,1.265790939331055,15,4,False
+ackley-test-2,Sphere Function,5,5,0,0,1.0,11.6315,15,3.0,False,low,hebo,5.039947137640723,2.3622050285339355,15,1,True
+ackley-test-2,Sphere Function,5,5,0,0,1.0,11.6315,15,3.0,False,low,saasbo,20.65308899413745,1.856640338897705,15,2,False
+ackley-test-2,Sphere Function,5,5,0,0,1.0,11.6315,15,3.0,False,low,vanilla-bo,21.47020993600364,2.169178009033203,15,3,False
+dataset-materials_bandgap_sweep_30D,Ackley Function,30,30,0,0,1.0,125.478,150,5.0,False,high,turbo,19.02293523971601,13.437255382537842,150,1,True
+dataset-materials_bandgap_sweep_30D,Ackley Function,30,30,0,0,1.0,125.478,150,5.0,False,high,hebo,20.43367999313214,16.408344984054565,150,2,False
+dataset-materials_bandgap_sweep_30D,Ackley Function,30,30,0,0,1.0,125.478,150,5.0,False,high,saasbo,20.50324797637219,70.51723170280457,150,3,False
+dataset-airfoil_aerodynamic_noise_5D,Ackley Function,5,5,0,0,1.0,20.913,150,30.0,False,low,turbo,0.4955147063809559,21.251478672027588,150,1,True
+dataset-airfoil_aerodynamic_noise_5D,Ackley Function,5,5,0,0,1.0,20.913,150,30.0,False,low,baxus,1.991645785335508,7.16739821434021,150,2,False
+dataset-airfoil_aerodynamic_noise_5D,Ackley Function,5,5,0,0,1.0,20.913,150,30.0,False,low,optuna,3.8330891039696735,1.132859230041504,150,3,False
+dataset-airfoil_aerodynamic_noise_5D,Ackley Function,5,5,0,0,1.0,20.913,150,30.0,False,low,hebo,7.263116086311337,54.67522072792053,150,4,False
+dataset-airfoil_aerodynamic_noise_5D,Ackley Function,5,5,0,0,1.0,20.913,150,30.0,False,low,vanilla-bo,10.33723718041719,68.49237656593323,150,5,False
+dataset-airfoil_aerodynamic_noise_5D,Ackley Function,5,5,0,0,1.0,20.913,150,30.0,False,low,random-search,16.35973817067994,0.0034246444702148,150,6,False
+dataset-airfoil_aerodynamic_noise_5D,Ackley Function,5,5,0,0,1.0,20.913,150,30.0,False,low,saasbo,16.788469302185636,22.318240642547607,150,7,False
+test-dataset,Ackley Function,10,10,0,0,1.0,41.826,20,2.0,False,medium,saasbo,19.515817191524963,2.3122262954711914,20,1,True
+test-dataset,Ackley Function,10,10,0,0,1.0,41.826,20,2.0,False,medium,hebo,20.212076938711245,0.638667106628418,20,2,False
+test-dataset,Ackley Function,10,10,0,0,1.0,41.826,20,2.0,False,medium,turbo,20.84147199812748,0.4224998950958252,20,3,False
+dataset-airfoil-aerodynamic-noise-5d,Ackley Function,5,5,0,0,1.0,20.913,25,5.0,False,low,baxus,13.34520849134313,0.8747293949127197,25,1,True
+dataset-airfoil-aerodynamic-noise-5d,Ackley Function,5,5,0,0,1.0,20.913,25,5.0,False,low,hebo,14.789733918323066,3.48909330368042,25,2,False
+dataset-airfoil-aerodynamic-noise-5d,Ackley Function,5,5,0,0,1.0,20.913,25,5.0,False,low,optuna,15.1572984556314,0.1022653579711914,25,3,False
+dataset-airfoil-aerodynamic-noise-5d,Ackley Function,5,5,0,0,1.0,20.913,25,5.0,False,low,saasbo,18.17529971047269,1.87339448928833,25,4,False
+dataset-airfoil-aerodynamic-noise-5d,Ackley Function,5,5,0,0,1.0,20.913,25,5.0,False,low,turbo,19.90839862411236,2.031320333480835,25,5,False
+dataset-materials-bandgap-sweep-30d,Ackley Function,30,30,0,0,1.0,125.478,25,0.8333,False,high,baxus,11.613207044247984,0.6443157196044922,25,1,True
+dataset-materials-bandgap-sweep-30d,Ackley Function,30,30,0,0,1.0,125.478,25,0.8333,False,high,optuna,20.146144573209664,0.4767289161682129,25,2,False
+dataset-materials-bandgap-sweep-30d,Ackley Function,30,30,0,0,1.0,125.478,25,0.8333,False,high,turbo,20.151424965333387,0.3911252021789551,25,3,False
+dataset-materials-bandgap-sweep-30d,Ackley Function,30,30,0,0,1.0,125.478,25,0.8333,False,high,saasbo,20.29537588746156,5.432795524597168,25,4,False
+dataset-materials-bandgap-sweep-30d,Ackley Function,30,30,0,0,1.0,125.478,25,0.8333,False,high,hebo,20.85145184443038,0.532153844833374,25,5,False
+dataset-airfoil-aerodynamic-noise-5d,Ackley Function,5,5,0,0,1.0,20.913,25,5.0,False,low,baxus,9.965748784509271,0.6662378311157227,25,1,True
+dataset-airfoil-aerodynamic-noise-5d,Ackley Function,5,5,0,0,1.0,20.913,25,5.0,False,low,optuna,15.1572984556314,0.14893388748168945,25,2,False
+dataset-airfoil-aerodynamic-noise-5d,Ackley Function,5,5,0,0,1.0,20.913,25,5.0,False,low,vanilla-bo,16.019423449494784,1.1291022300720215,25,3,False
+dataset-airfoil-aerodynamic-noise-5d,Ackley Function,5,5,0,0,1.0,20.913,25,5.0,False,low,hebo,18.328440805968157,2.288081645965576,25,4,False
+dataset-airfoil-aerodynamic-noise-5d,Ackley Function,5,5,0,0,1.0,20.913,25,5.0,False,low,saasbo,19.84317834820784,1.589536190032959,25,5,False
+dataset-airfoil-aerodynamic-noise-5d,Ackley Function,5,5,0,0,1.0,20.913,25,5.0,False,low,turbo,20.395189529298744,2.2956082820892334,25,6,False
+test-dataset,dataset-test-dataset,3,3,0,0,1.0,-0.3161,10,3.3333,False,low,turbo,0.0006918369827955684,0.13846969604492188,10,1,True
+test-dataset,dataset-test-dataset,3,3,0,0,1.0,-0.3161,10,3.3333,False,low,hebo,0.008702221875735383,0.2461237907409668,10,2,False
+test-dataset,dataset-test-dataset,3,3,0,0,1.0,-0.3161,10,3.3333,False,low,vanilla-bo,0.010633791085804867,0.2952091693878174,10,3,False
+test-problem,dataset-test-problem,5,5,0,0,1.0,-0.1375,100,20.0,False,low,turbo,-0.20372150006854062,0.41492366790771484,20,1,True
+test-problem,dataset-test-problem,5,5,0,0,1.0,-0.1375,100,20.0,False,low,hebo,-0.13759227857167589,0.30379343032836914,20,2,False
+test-problem,dataset-test-problem,5,5,0,0,1.0,-0.1375,100,20.0,False,low,vanilla-bo,-0.12046904856782914,0.3731119632720947,20,3,False
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,turbo,3.8589361090042435e-05,0.20764756202697754,15,1,True
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,baxus,0.001370517601416181,0.2083590030670166,15,2,False
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,vanilla-bo,0.006901688320840976,0.4879474639892578,15,3,False
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,saasbo,0.011660919370566273,0.23915719985961914,15,4,False
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,hebo,0.03974288788735912,0.3844475746154785,15,5,False
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,random-search,0.12347468029133458,0.00024509429931640625,15,6,False
+sphere_2d,Sphere Function (2D),2,2,0,0,1.0,4.6526,15,7.5,False,low,optuna,0.9789618522374198,0.021086454391479492,15,7,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,turbo,13.063631743952477,0.41697096824645996,15,1,True
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,optuna,15.414464974276042,0.018877744674682617,15,2,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,saasbo,16.20353249769877,0.4861183166503906,15,3,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,hebo,19.63400668798114,0.5194556713104248,15,4,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,baxus,19.65010797542863,0.12027335166931152,15,5,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,vanilla-bo,19.66344508379727,0.2318563461303711,15,6,False
+ackley_4d,Ackley Function (4D),4,4,0,0,1.0,16.7304,15,3.75,False,low,random-search,19.692236056310865,0.0003261566162109375,15,7,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,random-search,833.435669408888,0.0006225109100341797,15,1,True
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,optuna,7188.028253903491,0.018622159957885742,15,2,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,turbo,18314.627151406185,0.4800419807434082,15,3,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,baxus,33598.15077021217,0.28003621101379395,15,4,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,saasbo,80530.23439585873,0.5515968799591064,15,5,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,hebo,97304.60958798626,0.6347715854644775,15,6,False
+rosenbrock_6d,Rosenbrock Function (6D),6,6,0,0,1.0,16.2483,15,2.5,False,medium,vanilla-bo,164618.44977483677,0.91819167137146,15,7,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,baxus,19.01220117884651,0.3566863536834717,15,1,True
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,turbo,106.9601201477942,0.6175549030303955,15,2,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,optuna,126.33719995904104,0.025002241134643555,15,3,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,vanilla-bo,127.48538673767409,0.8831830024719238,15,4,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,hebo,136.89401854052636,0.6834523677825928,15,5,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,saasbo,137.98625261857757,1.56978440284729,15,6,False
+rastrigin_10d,Rastrigin Function (10D),10,10,0,0,1.0,23.263,15,1.5,False,medium,random-search,150.26717479702313,0.0002396106719970703,15,7,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,baxus,16.221326980849625,0.13074755668640137,15,1,True
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,turbo,19.93395980494003,0.05408000946044922,15,2,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,saasbo,19.946751558318173,1.1981852054595947,15,3,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,random-search,20.715387750367558,0.0003974437713623047,15,4,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,optuna,20.771864941258915,0.03461146354675293,15,5,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,hebo,20.87575209819889,0.06757521629333496,15,6,False
+ackley_20d,Ackley Function (20D),20,20,0,0,1.0,83.652,15,0.75,False,medium,vanilla-bo,21.01553095937521,0.2577688694000244,15,7,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,baxus,47.43852359821569,0.3066883087158203,15,1,True
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,turbo,205.28854786221302,0.07058119773864746,15,2,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,vanilla-bo,215.82575166553093,0.2528076171875,15,3,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,optuna,221.94131435527493,0.052297115325927734,15,4,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,saasbo,245.28741263386436,1.9838225841522217,15,5,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,random-search,256.2154651551479,0.0004391670227050781,15,6,False
+levy_30d,Levy Function (30D),30,30,0,0,1.0,89.872,15,0.5,False,high,hebo,259.5960277120438,0.08337664604187012,15,7,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,baxus,15.825702047299822,0.2043471336364746,15,1,True
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,optuna,20.685777481917576,0.11140298843383789,15,2,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,saasbo,20.796955582039867,1.9789283275604248,15,3,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,turbo,20.871133693195365,0.14325761795043945,15,4,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,vanilla-bo,20.919302329968424,0.2351844310760498,15,5,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,hebo,20.94449550455673,0.09886479377746582,15,6,False
+ackley_50d,Ackley Function (50D),50,50,0,0,1.0,209.13,15,0.3,False,high,random-search,20.96996419548738,0.0011224746704101562,15,7,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,baxus,2907.387234811869,0.2041325569152832,15,1,True
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,optuna,4867622.782109253,0.19974875450134277,15,2,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,saasbo,5079489.317896865,3.5395736694335938,15,3,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,turbo,5835140.936756292,1.8845641613006592,15,4,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,hebo,6996259.488853407,0.12790513038635254,15,5,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,random-search,7748148.219080255,0.0009024143218994141,15,6,False
+rosenbrock_80d,Rosenbrock Function (80D),80,80,0,0,1.0,216.644,15,0.1875,False,high,vanilla-bo,7763609.514635903,0.5740256309509277,15,7,False
+exp-3,Ackley Function,10,10,0,0,1.0,41.826,50,5.0,False,medium,turbo,20.006811151865485,40.64046311378479,50,1,True
