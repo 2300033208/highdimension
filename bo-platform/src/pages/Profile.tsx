@@ -63,7 +63,13 @@ const statusVariant: Record<string, "default" | "success" | "warn" | "danger" | 
   Failed: "danger",
 };
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8081/api/v1";
+const getCleanApiBaseUrl = () => {
+  const envUrl = import.meta.env.VITE_API_BASE_URL;
+  if (!envUrl) return "http://localhost:8081/api/v1";
+  const trimmed = envUrl.trim().replace(/\/+$/, "");
+  return trimmed.endsWith("/api/v1") ? trimmed : `${trimmed}/api/v1`;
+};
+const API_BASE_URL = getCleanApiBaseUrl();
 const getAuthHeader = () => {
   const token = localStorage.getItem("hdbo_auth");
   return token ? { Authorization: `Bearer ${token}` } : {};

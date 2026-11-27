@@ -108,7 +108,13 @@ const STORAGE_KEY = "hdbo_auth";
 const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL || "admin@hdbobench.local";
 const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "changeme";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8081/api/v1";
+const getCleanApiBaseUrl = () => {
+  const envUrl = import.meta.env.VITE_API_BASE_URL;
+  if (!envUrl) return "http://localhost:8081/api/v1";
+  const trimmed = envUrl.trim().replace(/\/+$/, "");
+  return trimmed.endsWith("/api/v1") ? trimmed : `${trimmed}/api/v1`;
+};
+const API_BASE_URL = getCleanApiBaseUrl();
 const USER_DATA_PREFIX = "hdbo_userdata_";
 
 function getAuthHeader() {
@@ -249,6 +255,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       return { success: false, error: data.message || "Invalid credentials" };
     } catch (e) {
+      console.error("Login network error:", e, "Attempted URL:", `${API_BASE_URL}/auth/login`);
       return { success: false, error: "Network error connecting to backend" };
     }
   }, []);
@@ -273,6 +280,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       return { success: false, error: data.message || "Google authentication failed" };
     } catch (e) {
+      console.error("Login network error:", e, "Attempted URL:", `${API_BASE_URL}/auth/login`);
       return { success: false, error: "Network error connecting to backend" };
     }
   }, []);
@@ -301,6 +309,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       return { success: false, error: data.message || "Registration failed" };
     } catch (e) {
+      console.error("Login network error:", e, "Attempted URL:", `${API_BASE_URL}/auth/login`);
       return { success: false, error: "Network error connecting to backend" };
     }
   }, []);
@@ -332,6 +341,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       return { success: false, error: data.message || "Invalid OTP" };
     } catch (e) {
+      console.error("Login network error:", e, "Attempted URL:", `${API_BASE_URL}/auth/login`);
       return { success: false, error: "Network error connecting to backend" };
     }
   }, []);
@@ -349,6 +359,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       return { success: false, error: data.message || "Failed to send reset link" };
     } catch (e) {
+      console.error("Login network error:", e, "Attempted URL:", `${API_BASE_URL}/auth/login`);
       return { success: false, error: "Network error connecting to backend" };
     }
   }, []);
@@ -366,6 +377,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       return { success: false, error: data.message || "Invalid OTP" };
     } catch (e) {
+      console.error("Login network error:", e, "Attempted URL:", `${API_BASE_URL}/auth/login`);
       return { success: false, error: "Network error connecting to backend" };
     }
   }, []);
@@ -383,6 +395,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       return { success: false, error: data.message || "Failed to reset password" };
     } catch (e) {
+      console.error("Login network error:", e, "Attempted URL:", `${API_BASE_URL}/auth/login`);
       return { success: false, error: "Network error connecting to backend" };
     }
   }, []);
@@ -400,6 +413,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       return { success: false, error: data.message || "Failed to resend OTP" };
     } catch (e) {
+      console.error("Login network error:", e, "Attempted URL:", `${API_BASE_URL}/auth/login`);
       return { success: false, error: "Network error connecting to backend" };
     }
   }, []);
