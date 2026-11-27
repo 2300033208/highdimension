@@ -6,16 +6,14 @@ spring:
     url: ${DB_URL:jdbc:mysql://localhost:3306/bobench?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
     username: ${DB_USER:root}
     password: ${DB_PASS:}
-    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
-      ddl-auto: ${DB_DDL_AUTO:validate}
+      ddl-auto: ${DB_DDL_AUTO:update}
     show-sql: ${DB_SHOW_SQL:false}
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hibernate.dialect.MySQLDialect
 
   servlet:
     multipart:
